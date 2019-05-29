@@ -5,7 +5,7 @@ Train data: 400 Samples
 
 Test data: 10000 Samples 
 
-Function used for train data(400 Samples):
+#### Function used for train data(400 Samples):
 
 y = f(x) = 1 + (X + 2 * X^2) * sin(-X^2) 
 
