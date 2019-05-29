@@ -3,7 +3,7 @@ Network Sturcture: 1-7-1
 
 Train data: 400 Samples 
 
-Test data: 10000 Samples \n
+Test data: 10000 Samples 
 
 Function used for train data(400 Samples):
 
