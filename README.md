@@ -12,5 +12,7 @@ y = f(x) = 1 + (X + 2 * X^2) * sin(-X^2)
 The same mapping function is used for test data, but with 10,000 samples
 
 ### Concepts
+Sebastian Ruder's Blog: http://ruder.io/optimizing-gradient-descent/index.html#gradientdescentoptimizationalgorithms
+
 For concepts: http://cs231n.github.io/neural-networks-3/#sgd
 
