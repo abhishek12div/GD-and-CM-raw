@@ -207,6 +207,4 @@ print("W2 = " + str(parameters["W2"]))
 print("b2 = " + str(parameters["b2"]))
 
 
-def runtest(X, Y):
-
 
