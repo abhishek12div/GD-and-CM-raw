@@ -206,5 +206,13 @@ print("b1 = " + str(parameters["b1"]))
 print("W2 = " + str(parameters["W2"]))
 print("b2 = " + str(parameters["b2"]))
 
+W1 = parameters["W1"]
+W2 = parameters["W2"]
+b1 = parameters["b1"]
+b2 = parameters["b2"]
+x, y, z = layer_sizes(X1, Y1)
 
+a2, cache = fwd_prop(X1, parameters)
+error = cost_func(a2, Y1)
+print(error)
 
