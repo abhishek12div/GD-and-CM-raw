@@ -1,4 +1,4 @@
-# Stochastic-Gradient-Descent
+# Stochastic-Gradient-Descent for Neural Network Training
 Network Sturcture: 1-7-1 
 
 Train data: 400 Samples 
