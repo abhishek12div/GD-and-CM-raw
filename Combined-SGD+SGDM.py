@@ -149,6 +149,8 @@ def back_prop(parameters, cache, X, Y):
              "db2": db2}
     return grads
 
+#SGD Update
+#######################################################################################################################
 #update params w(k+1) = w(k) - alpha * dW(k)
 def sgd_update_params(parameters, grads, alpha=0.01):
     W1 = parameters["W1"]
@@ -172,6 +174,8 @@ def sgd_update_params(parameters, grads, alpha=0.01):
                   "b2": b2}
     return parameters
 
+#Classical Momentum Update
+#######################################################################################################################
 def sgd_mom_update_params(parameters, grads, u= 0.75, alpha=0.01):
     W1 = parameters["W1"]
     b1 = parameters["b1"]
@@ -208,6 +212,8 @@ def sgd_mom_update_params(parameters, grads, u= 0.75, alpha=0.01):
                   }
     return parameters
 
+#Run SGD
+#######################################################################################################################
 def nn_model1(X, Y, n_h, num_iterations=1000, print_cost=False):
     n_x = layer_sizes(X, Y)[0]
     n_y = layer_sizes(X, Y)[2]
@@ -261,6 +267,8 @@ a2, cache = fwd_prop(X1, parameters)
 error = cost_func(a2, Y1)
 print(error)
 
+#Run Classical Momentum
+#######################################################################################################################
 def nn_model2(X, Y, n_h, num_iterations, print_cost=False):
     n_x = layer_sizes(X, Y)[0]
     n_y = layer_sizes(X, Y)[2]
@@ -295,7 +303,6 @@ def nn_model2(X, Y, n_h, num_iterations, print_cost=False):
     plt.ylabel("loss")
     plt.plot(0, np.max(loss_list))
     plt.legend(loc='upper right')
-    plt.show()
 
     return parameters
 
@@ -315,3 +322,7 @@ p, q, r = layer_sizes(X1, Y1)
 a2, cache = fwd_prop(X1, para)
 error = cost_func(a2, Y1)
 print(error)
+
+#Plot
+#######################################################################################################################
+plt.show()
