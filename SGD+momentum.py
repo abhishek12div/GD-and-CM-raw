@@ -150,7 +150,7 @@ def back_prop(parameters, cache, X, Y):
     return grads
 
 #update params w(k+1) = w(k) - alpha * dW(k)
-def update_params(parameters, grads, u= 0.75, alpha=0.01):
+def update_params(parameters, grads, u= 0.8, alpha=0.01):
     W1 = parameters["W1"]
     b1 = parameters["b1"]
     W2 = parameters["W2"]
