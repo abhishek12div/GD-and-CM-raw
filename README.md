@@ -19,7 +19,7 @@ W(k+1) = W(k) + alpha * dW(k)
 #### 1. sgd.py - executes only the Stochastic Gradient Update
 #### 2. SGD+Momentum.py - executes only the Classical Momentum Update
 #### 3. Combined-SGD+SGDM - When run, the graph clearly distinguishes that Classical Momentum is Superior in minimization of Error
-### Concepts
+## References:
 Sebastian Ruder's Blog: http://ruder.io/optimizing-gradient-descent/index.html#gradientdescentoptimizationalgorithms
 
 Notes: http://cs231n.github.io/neural-networks-3/#sgd
