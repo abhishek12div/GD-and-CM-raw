@@ -6,15 +6,12 @@ Train data: 400 Samples
 Test data: 10000 Samples 
 
 ### Function used for train data(400 Samples):
-
 #### y = f(x) = 1 + (X + 2 * X^2) * sin(-X^2) 
-
 The same mapping function is used for test data, but with 10,000 samples
-
-### Update Formula - SGD
+### Update Formula - SGD:
 W(k+1) = W(k) + alpha * dW(k)
 
-### Udate Formula - SGD+Momentum 
+### Udate Formula - SGD+Momentum :
 ###### 1. Vector Update: m(k+1) = u * m(k) + dW(k)
 ###### 2. Parameter Update: W(k+1) = W(k) - alpha * m(k+1)
 
