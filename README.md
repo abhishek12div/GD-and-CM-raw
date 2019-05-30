@@ -18,6 +18,10 @@ W(k+1) = W(k) + alpha * dW(k)
 ###### 1. Vector Update: m(k+1) = u * m(k) + dW(k)
 ###### 2. Parameter Update: W(k+1) = W(k) - alpha * m(k+1)
 
+## Files:
+#### 1. sgd.py - executes only the Stochastic Gradient Update
+#### 2. SGD+Momentum.py - executes only the Classical Momentum Update
+#### 3. Combined-SGD+SGDM - When run, the graph clearly distinguishes that Classical Momentum is Superior in minimization of Error
 ### Concepts
 Sebastian Ruder's Blog: http://ruder.io/optimizing-gradient-descent/index.html#gradientdescentoptimizationalgorithms
 
