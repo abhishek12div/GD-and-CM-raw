@@ -24,3 +24,4 @@ Sebastian Ruder's Blog: http://ruder.io/optimizing-gradient-descent/index.html#g
 
 Notes: http://cs231n.github.io/neural-networks-3/#sgd
 
+Paper: http://cs229.stanford.edu/proj2015/054_report.pdf
