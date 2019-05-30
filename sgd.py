@@ -13,12 +13,12 @@ def normalize(data):
     X = a +((y*(b-a))/diff)
     return X
 
-#train data
+#TRAIN DATA
 X_train = np.arange(-4,4,0.02)
 #print(X_train)
 Y_train = 1+(X_train + 2 * X_train**2)*np.sin(-X_train**2)
 
-#normalize train data:
+#NORMALIZE train data:
 #leads to a better performance because gradient descent converges faster after normalization
 X = normalize(X_train)
 X = X.reshape(1, len(X))
@@ -33,9 +33,9 @@ Y = Y.reshape(1, len(Y))
 #plt.plot(X, Y, '.')
 #plt.show()
 
-
 #######################################################################################################################
-#test data
+
+#TEST DATA
 X_test = np.random.uniform(-4,4,10000)
 Y_test = 1 + (X_test+2*X_test*X_test)*np.sin(-X_test*X_test)
 
@@ -48,15 +48,14 @@ print(X1.shape, Y1.shape)
 plt.plot(X1, Y1, '.')
 plt.show()
 
-
 #######################################################################################################################
+
 #Initialize neural network structure
 def layer_sizes(X, Y):
     n_x = X.shape[0]
     n_h = 7
     n_y = Y.shape[0]
     return n_x, n_h, n_y
-
 
 #Initialize parameters
 def initialize_parameters(n_x, n_h, n_y):
@@ -139,7 +138,7 @@ def back_prop(parameters, cache, X, Y):
              "db2": db2}
     return grads
 
-#update params w(k+1) = w(k) - alpha * dW(k)
+#UPDATE PARAMETERS W(k+1) = W(k) - alpha * dW(k)
 def update_params(parameters, grads, alpha=0.01):
     W1 = parameters["W1"]
     b1 = parameters["b1"]
@@ -162,7 +161,7 @@ def update_params(parameters, grads, alpha=0.01):
                   "b2": b2}
     return parameters
 
-
+#MAIN MODEL- Iterate for continuous update - Now, the Network is Learning
 def nn_model(X, Y, n_h, num_iterations=10000, print_cost=False):
     n_x = layer_sizes(X, Y)[0]
     n_y = layer_sizes(X, Y)[2]
@@ -200,6 +199,7 @@ def nn_model(X, Y, n_h, num_iterations=10000, print_cost=False):
 
     return parameters
 
+#Run the Model
 parameters = nn_model(X, Y, 7, num_iterations=100000, print_cost=True)
 print("W1 = " + str(parameters["W1"]))
 print("b1 = " + str(parameters["b1"]))
@@ -216,4 +216,5 @@ x, y, z = layer_sizes(X1, Y1)
 a2, cache = fwd_prop(X1, parameters)
 error = cost_func(a2, Y1)
 print(error)
+#Final run tested on Test Data should certainly give a lesser error as the network has already learnt to predict
 
