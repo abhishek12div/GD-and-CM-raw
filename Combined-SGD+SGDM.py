@@ -176,7 +176,7 @@ def sgd_update_params(parameters, grads, alpha=0.01):
 
 #Classical Momentum Update
 #######################################################################################################################
-def sgd_mom_update_params(parameters, grads, u= 0.75, alpha=0.01):
+def sgd_mom_update_params(parameters, grads, u= 0.8, eta = 0.9, alpha=0.01):
     W1 = parameters["W1"]
     b1 = parameters["b1"]
     W2 = parameters["W2"]
@@ -191,10 +191,10 @@ def sgd_mom_update_params(parameters, grads, u= 0.75, alpha=0.01):
     dW2 = grads["dW2"]
     db2 = grads["db2"]
 
-    m_W1 = u * m_W1 + dW1
-    m_b1 = u * m_b1 + db1
-    m_W2 = u * m_W2 + dW2
-    m_b2 = u * m_b2 + db2
+    m_W1 = u * m_W1 + eta * dW1
+    m_b1 = u * m_b1 + eta * db1
+    m_W2 = u * m_W2 + eta * dW2
+    m_b2 = u * m_b2 + eta * db2
 
     W1 = W1 - alpha * m_W1
     b1 = b1 - alpha * m_b1
