@@ -1,4 +1,4 @@
-# Stochastic-Gradient-Descent for Neural Network Training
+# Steepest-Gradient-Descent for Neural Network Training
 Network Sturcture: 1-7-1 
 
 Train data: 400 Samples 
@@ -16,7 +16,7 @@ W(k+1) = W(k) + alpha * dW(k)
 ###### 2. Parameter Update: W(k+1) = W(k) - alpha * m(k+1)
 
 ## Files:
-#### 1. sgd.py - executes only the Stochastic Gradient Update
+#### 1. sgd.py - executes only the Steepest Gradient Update
 #### 2. SGD+Momentum.py - executes only the Classical Momentum Update
 #### 3. Combined-SGD+SGDM - When run, the graph clearly distinguishes that Classical Momentum is Superior in minimizing the Error
 #### 4. PPT file
