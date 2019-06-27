@@ -71,8 +71,9 @@ def initialize_parameters(n_x, n_h, n_y):
     assert (b2.shape == (n_y, 1))
     s1 = (n_h, n_x)
     s2 = (n_y, n_h)
+    s3 = (n_h, 1)
     m_W1 = np.zeros(s1)
-    m_b1 = np.zeros(s1)
+    m_b1 = np.zeros(s3)
     m_W2 = np.zeros(s2)
     m_b2 = np.zeros(1)
     parameters = {"W1": W1,
