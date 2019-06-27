@@ -18,7 +18,7 @@ W(k+1) = W(k) + alpha * dW(k)
 ## Files:
 #### 1. sgd.py - executes only the Steepest Gradient Update
 #### 2. SGD+Momentum.py - executes only the Classical Momentum Update
-#### 3. Combined-SGD+SGDM - When run, the graph clearly distinguishes that Classical Momentum is Superior in minimizing the Error
+#### 3. Combined-SGD+SGDM - When run, the graph clearly shows that Classical Momentum is Superior in minimizing the Error
 #### 4. PPT file
 ## References:
 Sebastian Ruder's Blog: http://ruder.io/optimizing-gradient-descent/index.html#gradientdescentoptimizationalgorithms
