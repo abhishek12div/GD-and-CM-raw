@@ -11,7 +11,7 @@ The same mapping function is used for test data, but with 10,000 samples
 ### Update Formula - SGD:
 W(k+1) = W(k) + alpha * dW(k)
 
-### Udate Formula - SGD+Momentum :
+### Udate Formula - Classical Momentum :
 ###### 1. Vector Update: m(k+1) = u * m(k) + dW(k)
 ###### 2. Parameter Update: W(k+1) = W(k) - alpha * m(k+1)
 
